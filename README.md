@@ -23,14 +23,7 @@ ___
 ### Q: Are there any limitations on values set by admins (or other roles) in protocols you integrate with, including restrictions on array lengths?
 1. Allowance limit per payment token. Mintint/redeeming of mToken is limited by the admin and this limit is set per input/output tokens
 2. Answers from DataFeed contract, that are fetched from Chainlink compatible feed, are limited by the min/max prices, that are set during the DataFeed deployment
-___
-
-### Q: For permissioned functions, please list all checks and requirements that will be made before calling the function.
-onlyRole() - Checks if the permissioned function is being called by an address with its respective admin role (i.e. M_TBILL_MINT_OPERATOR_ROLE in the case of issuance).
-onlyNotBlacklisted() - Checks that from and to addresses are not currently assigned the BLACKLISTED_ROLE.
-onlyGreenlisted() - Checks that the address is currently assigned the GREENLISTED_ROLE.
-
-___
+_____
 
 ### Q: Is the codebase expected to comply with any EIPs? Can there be/are there any deviations from the specification?
 We strive to keep mTBILL and mBASIS as ERC20 compliant as possible.
